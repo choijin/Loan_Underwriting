@@ -106,11 +106,9 @@ def preprocessor(df, preproc_params, train):
     # Required features
     final_columns = [
                  'roa',
-                 'cash_ratio',
                  'asst_tot',
                  'debt_ratio',
                  'cash_return_assets',
-                 'days_rec',
                  'leverage',
                  'stmt_date',
                  'default_label']
@@ -264,7 +262,7 @@ def calibrate_prob(raw_prob, params):
     return calibrate_prob
 
 # read train data
-df_original = pd.read_csv('train.csv')
+df_original = pd.read_csv('data/train.csv')
 df = df_original.copy()
 df = set_target_label(df)
 

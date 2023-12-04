@@ -25,12 +25,10 @@ columns = list(df.columns)
 
 output_csv = predictor_harness(df, model, preprocessor, output_csv, 
                                preproc_params = {'asst_tot_median': 3458428.5, 
-                                                 'days_rec_median': 133.75859807872905, 
                                                  'roa_median': 2.39, 
                                                  'debt_ratio_median': 0.5506120856551856, 
                                                  'cash_return_assets_median': 0.021743523917807147, 
                                                  'leverage_median': 0.7460792711253206, 
-                                                 'cash_ratio_median': 0.0795322078590196
                                                  })
                                
 print('done')
