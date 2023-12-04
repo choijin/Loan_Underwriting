@@ -4,6 +4,7 @@ Click [HERE](https://github.com/choijin/Loan_Underwriting) to see the full and d
 ## Project Overview
 This was a project in my Machine Learning in Finance course at NYU. The project aimed at enhancing the bank's loan underwriting process. Utilizing machine learning, I developed a model to predict the one-year Probability of Default (PD) for prospective borrowers, thereby enabling risk-based pricing and more informed loan decisions.
 
+### Workflow
 ![](/images/loan_underwriting.png)
 
 ### Approach
@@ -15,7 +16,7 @@ The approach involved training a logistic regression model on historical bank tr
 - **`Evaluation`**: Applied finance-specific evaluation methods, including walk-forward testing.
 
 ### Outcome
-The model outputs predicted default probability, which can assist the bank in determining suitable interest rates and underwriting fees.
+The model outputs predicted default probability, which can assist the bank in determining suitable interest rates and underwriting fees. Using the above mentioned techniques, the model's AUC improved from baseline result of **0.701** to **0.7761**.
 
 ## Usage
 ### Key Files
@@ -48,7 +49,7 @@ Handled missing values by replacing them with related financial variables. For e
 - `Leverage`: Leverage refers to the use of debt (borrowed funds) to amplify returns from an investment or project. Higher leverage increases PD. i.e., (Long term debt + Short term debt) / Total Assets
 
 ## Feature Selection
-## Baseline Model
+### Baseline Model
 A baseline model was developed using a "kitchen sink" approach, where all variables were initially included. This model served as a benchmark for the performance of the refined model. The AUC for this model was **0.701**.
 
 ### Univariate Analysis
