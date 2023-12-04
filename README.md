@@ -20,14 +20,14 @@ The model outputs predicted default probability, which can assist the bank in de
 - `harness.py`: A consolidating script that inputs the test dataset and outputs predictions. It utilizes `model.pkl` and `prediction.py`. In the course, we were not given a test set. If you want to run this model, perhaps use the train data and split into train/test.
 - `prediction.py`: Contains functions for preprocessing the data, running the model on the test dataset, applying calibration, and generating the final output. This gets called in the `harness.py`.
 
-```
-python3 harness.py --input_csv  <input file in csv> --output_csv <output csv file path to which the predictions are written> 
-```
-
 ### How to Run
 1. Ensure all dependencies are installed.
 2. Run `estimation.py` to train the model and generate `model.pkl`, along with the parameter values required for the `harness.py`.
 3. Use `harness.py` with your test dataset to get predictions. This script will call `prediction.py` for necessary processing and prediction steps.
+
+```
+python3 harness.py --input_csv  <input file in csv> --output_csv <output csv file path to which the predictions are written> 
+```
 
 ## Data Understanding and Preparation
 ### Problem Formulation

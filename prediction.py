@@ -58,11 +58,9 @@ def preprocessor(df, preproc_params={}):
 
     # Required features
     features = [ 'roa',
-                 'cash_ratio',
                  'asst_tot',
                  'debt_ratio',
                  'cash_return_assets',
-                 'days_rec',
                  'leverage']
     
     # Drop unnecessary columns
