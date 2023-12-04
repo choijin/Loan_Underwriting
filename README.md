@@ -1,7 +1,10 @@
 # Predicting Loan Defaults for Banca Massiccia
+Click [HERE](https://github.com/choijin/Loan_Underwriting) to see the full and detailed script
 
 ## Project Overview
 This was a project in my Machine Learning in Finance course at NYU. The project aimed at enhancing the bank's loan underwriting process. Utilizing machine learning, I developed a model to predict the one-year Probability of Default (PD) for prospective borrowers, thereby enabling risk-based pricing and more informed loan decisions.
+
+![](/images/loan_underwriting.png)
 
 ### Approach
 The approach involved training a logistic regression model on historical bank transaction data. The focus was on key financial indicators to forecast the probability of default for new borrowers.
