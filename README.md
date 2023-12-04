@@ -7,9 +7,9 @@ This was a project in my Machine Learning in Finance course at NYU. The project 
 The approach involved training a logistic regression model on historical bank transaction data. The focus was on key financial indicators to forecast the probability of default for new borrowers.
 
 ### Techniques
-- **`Feature Engineering:`** Extracted meaningful indicators such as debt ratio, leverage, and cash return on assets.
-- **`Modeling:`** Employed logistic regression for default prediction. This was to emphasize explanability of the model. 
-- **`Evaluation:`** Applied finance-specific evaluation methods, including walk-forward testing.
+- **`Feature Engineering`**: Extracted meaningful indicators such as debt ratio, leverage, and cash return on assets.
+- **`Modeling`**: Employed logistic regression for default prediction. This was to emphasize explanability of the model. 
+- **`Evaluation`**: Applied finance-specific evaluation methods, including walk-forward testing.
 
 ### Outcome
 The model outputs predicted default probability, which can assist the bank in determining suitable interest rates and underwriting fees.
