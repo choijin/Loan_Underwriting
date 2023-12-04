@@ -7,9 +7,9 @@ This was a project in my Machine Learning in Finance course at NYU. The project 
 The approach involved training a logistic regression model on historical bank transaction data. The focus was on key financial indicators to forecast the probability of default for new borrowers.
 
 ### Techniques
-- `**Feature Engineering:**`` Extracted meaningful indicators such as debt ratio, leverage, and cash return on assets.
-- `**Modeling:**`` Employed logistic regression for default prediction. This was to emphasize explanability of the model. 
-- `**Evaluation:**`` Applied finance-specific evaluation methods, including walk-forward testing.
+- `**Feature Engineering:**` Extracted meaningful indicators such as debt ratio, leverage, and cash return on assets.
+- `**Modeling:**` Employed logistic regression for default prediction. This was to emphasize explanability of the model. 
+- `**Evaluation:**` Applied finance-specific evaluation methods, including walk-forward testing.
 
 ### Outcome
 The model outputs predicted default probability, which can assist the bank in determining suitable interest rates and underwriting fees.
@@ -18,11 +18,15 @@ The model outputs predicted default probability, which can assist the bank in de
 ### Key Files
 - `estimation.py`: This script calculates the AUC of the training dataset, computes the medians of the final variables using the training dataset, and creates `model.pkl`, the logistic regression model using the final variables.
 - `harness.py`: A consolidating script that inputs the test dataset and outputs predictions. It utilizes `model.pkl` and `prediction.py`. In the course, we were not given a test set. If you want to run this model, perhaps use the train data and split into train/test.
-- `prediction.py`: Contains functions for preprocessing the data, running the model on the test dataset, applying calibration, and generating the final output. This gets called in the harness.py.
+- `prediction.py`: Contains functions for preprocessing the data, running the model on the test dataset, applying calibration, and generating the final output. This gets called in the `harness.py`.
+
+```
+python3 harness.py --input_csv  <input file in csv> --output_csv <output csv file path to which the predictions are written> 
+```
 
 ### How to Run
 1. Ensure all dependencies are installed.
-2. Run `estimation.py` to train the model and generate `model.pkl`, along with the parameter values required for the harness.py.
+2. Run `estimation.py` to train the model and generate `model.pkl`, along with the parameter values required for the `harness.py`.
 3. Use `harness.py` with your test dataset to get predictions. This script will call `prediction.py` for necessary processing and prediction steps.
 
 ## Data Understanding and Preparation
@@ -77,6 +81,6 @@ The final variables used for the model were:
 * cash return assets
 * leverage
 
-The AUC using these variables was 0.7761. Using financial variables made a significant improvement upon the baseline model.
+The AUC using these variables was **0.7761**. Using financial variables made a significant improvement upon the baseline model.
 
 Further improvements can be made using a more sophisticated models. For example, a non-parameteric tree-based model like XGBoost or Random Forest model can be tested to see the performance of the AUC. Further assessment will be needed to decide if the improvement on AUC is more beneficial than the explainability of the Logistic Regression.
