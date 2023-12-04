@@ -7,9 +7,9 @@ This was a project in my Machine Learning in Finance course at NYU. The project 
 The approach involved training a logistic regression model on historical bank transaction data. The focus was on key financial indicators to forecast the probability of default for new borrowers.
 
 ### Techniques
-- `**Feature Engineering:**` Extracted meaningful indicators such as debt ratio, leverage, and cash return on assets.
-- `**Modeling:**` Employed logistic regression for default prediction. This was to emphasize explanability of the model. 
-- `**Evaluation:**` Applied finance-specific evaluation methods, including walk-forward testing.
+- **`Feature Engineering:`** Extracted meaningful indicators such as debt ratio, leverage, and cash return on assets.
+- **`Modeling:`** Employed logistic regression for default prediction. This was to emphasize explanability of the model. 
+- **`Evaluation:`** Applied finance-specific evaluation methods, including walk-forward testing.
 
 ### Outcome
 The model outputs predicted default probability, which can assist the bank in determining suitable interest rates and underwriting fees.
@@ -46,7 +46,7 @@ Handled missing values by replacing them with related financial variables. For e
 
 ## Feature Selection
 ## Baseline Model
-A baseline model was developed using a "kitchen sink" approach, where all variables were initially included. This model served as a benchmark for the performance of the refined model. The AUC for this model was 0.701.
+A baseline model was developed using a "kitchen sink" approach, where all variables were initially included. This model served as a benchmark for the performance of the refined model. The AUC for this model was **0.701**.
 
 ### Univariate Analysis
 * Within the six categories of financial factors, the top (1 to 2) features per financial factors were selected via univariate analysis. This was using a single predictor to predict the target variable (binary column of 1 for is_default and 0 for no_default). 
@@ -81,6 +81,6 @@ The final variables used for the model were:
 * cash return assets
 * leverage
 
-The AUC using these variables was **0.7761**. Using financial variables made a significant improvement upon the baseline model.
+The AUC using these variables was **0.7761**. Using financial variables made a significant improvement upon the baseline model (AUC of 0.701).
 
 Further improvements can be made using a more sophisticated models. For example, a non-parameteric tree-based model like XGBoost or Random Forest model can be tested to see the performance of the AUC. Further assessment will be needed to decide if the improvement on AUC is more beneficial than the explainability of the Logistic Regression.
